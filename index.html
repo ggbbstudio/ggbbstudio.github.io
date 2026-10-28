@@ -11,6 +11,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=3">
+<script>
+// 직접 English 를 고른 사람만 영어 페이지로 (처음 온 사람은 그대로)
+try { if (localStorage.getItem("lang") === "en") location.replace("en/" + location.hash); } catch (e) {}
+</script>
 </head>
 <body>
 <aside class="side">
@@ -24,7 +28,7 @@
       <a href="#games">게임</a>
       <a href="#about">소개</a>
       <a href="#contact">문의</a>
-      <a href="en/" hreflang="en" lang="en">English</a>
+      <a href="en/" hreflang="en" lang="en" data-lang="en">English</a>
     </nav>
   </div>
 </aside>
@@ -68,5 +72,11 @@
     <a href="privacy.html#en">Privacy Policy</a>
   </footer>
 </main>
+<script>
+// 언어 버튼을 누르면 고른 언어를 기억
+document.querySelectorAll("a[data-lang]").forEach(function (a) {
+  a.addEventListener("click", function () { try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {} });
+});
+</script>
 </body>
 </html>

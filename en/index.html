@@ -24,7 +24,7 @@
       <a href="#games">Games</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="../" hreflang="ko" lang="ko">한국어</a>
+      <a href="../" hreflang="ko" lang="ko" data-lang="ko">한국어</a>
     </nav>
   </div>
 </aside>
@@ -65,8 +65,14 @@
   <footer>
     <span>© 2026 GGBB Studio</span>
     <a href="../privacy.html#en">Privacy Policy</a>
-    <a href="../privacy.html" lang="ko">개인정보처리방침</a>
+    <a href="../privacy.html" lang="ko" data-lang="ko">개인정보처리방침</a>
   </footer>
 </main>
+<script>
+// 언어 버튼을 누르면 고른 언어를 기억
+document.querySelectorAll("a[data-lang]").forEach(function (a) {
+  a.addEventListener("click", function () { try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {} });
+});
+</script>
 </body>
 </html>
