@@ -13,7 +13,7 @@ body {
   margin: 0; background: var(--paper); color: var(--ink);
   font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   font-size: 17px; line-height: 1.8; word-break: keep-all;
-  display: grid; grid-template-columns: minmax(340px, 38%) 1fr;
+  display: grid; grid-template-columns: clamp(340px, 34vw, 460px) 1fr;
 }
 img { display: block; max-width: 100%; height: auto; }
 a { color: var(--blue); }
@@ -23,13 +23,13 @@ a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
 .side {
   position: sticky; top: 0; height: 100vh;
   background: var(--blue); color: #fff;
-  padding: 40px 40px 44px;
+  padding: 56px 40px 44px;
   display: flex; flex-direction: column; justify-content: space-between;
   overflow: hidden;
 }
 .mark {
   margin: 0; font-family: "Black Han Sans", sans-serif; font-weight: 400;
-  font-size: min(30vh, 17vw); line-height: .82; letter-spacing: -.02em;
+  font-size: min(28vh, 16vw, 220px); line-height: .82; letter-spacing: -.02em;
 }
 .mark span { display: block; }
 .mark span:first-child { color: #fff; }
@@ -41,7 +41,7 @@ a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
 .nav a:hover { border-color: var(--yellow); }
 
 /* ── 오른쪽 본문 ── */
-main { padding: 64px clamp(24px, 6vw, 96px) 40px; max-width: 820px; }
+main { padding: 64px clamp(24px, 6vw, 96px) 40px; width: 100%; max-width: 900px; justify-self: center; }
 section { padding-bottom: 64px; margin-bottom: 56px; border-bottom: 1px solid var(--line); }
 section:last-of-type { border-bottom: 0; margin-bottom: 0; }
 h2 { font-family: "Black Han Sans", sans-serif; font-weight: 400; font-size: 34px; line-height: 1.1; margin: 0 0 24px; }
