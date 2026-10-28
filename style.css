@@ -1,34 +1,67 @@
+/* GGBB Studio — 진한 파랑 · 노랑 블록 (2026-10-28) */
 :root {
-  --bg: #fdf6ec;
-  --card: #fffdf8;
-  --text: #4a3b32;
-  --muted: #8a7a6e;
-  --accent: #e8789a;
-  --line: #efe2d2;
+  --blue: #3047d8;
+  --yellow: #ffd84d;
+  --ink: #1b1f3b;
+  --soft: #f2f4ff;
+  --muted: #6b6f86;
 }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+  background: #fff;
+  color: var(--ink);
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
   line-height: 1.7;
 }
-main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
-header { text-align: center; margin-bottom: 32px; }
-h1 { margin: 0; font-size: 2.2rem; color: var(--accent); }
-h2 { font-size: 1.25rem; margin: 0 0 8px; }
+img { display: block; }
+a { color: var(--blue); }
+main, footer { max-width: 880px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
+
+/* 첫 화면 띠 */
+.hero { background: var(--blue); color: #fff; padding: 110px 20px 90px; }
+.hero > * { max-width: 840px; margin-left: auto; margin-right: auto; }
+.logo { font-family: "Black Han Sans", sans-serif; font-size: 100px; line-height: .9; letter-spacing: -2px; }
+.logo span { display: block; color: var(--yellow); }
+.tag { font-size: 20px; opacity: .92; margin-top: 22px; }
+.nav { display: flex; gap: 14px; margin-top: 24px; flex-wrap: wrap; }
+.nav a { color: var(--ink); background: var(--yellow); text-decoration: none; padding: 8px 18px; border-radius: 10px; font-weight: 800; }
+
+/* 본문 */
+section { padding: 56px 0 8px; }
+h2 { font-family: "Black Han Sans", sans-serif; font-weight: 400; font-size: 44px; margin: 0 0 20px; }
+
+/* 게임 카드 */
+.game { display: flex; gap: 20px; align-items: flex-start; background: var(--soft); border-radius: 22px; padding: 22px; margin-bottom: 16px; }
+.icon { width: 96px; height: 96px; flex: none; border-radius: 22px; }
+.info { flex: 1; min-width: 0; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.row h3 { margin: 0; font-family: "Black Han Sans", sans-serif; font-weight: 400; font-size: 28px; }
+.info p { margin: 6px 0 10px; }
+.state { font-size: 12px; font-weight: 800; background: var(--ink); color: #fff; border-radius: 8px; padding: 3px 10px; }
+.badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.badge { font-size: 12px; font-weight: 800; background: #fff; border: 2px solid var(--blue); color: var(--blue); border-radius: 8px; padding: 2px 8px; }
+.btns { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.btn { background: var(--blue); color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 12px; font-weight: 800; }
+.btn.off { background: #c9cfe9; color: #fff; cursor: default; }
+.link { font-weight: 700; font-size: 14px; }
+
+footer { padding-top: 40px; padding-bottom: 48px; font-size: 13px; color: #777; }
+footer a { color: #777; }
+
+/* 개인정보처리방침 같은 글 페이지 (privacy.html 은 내용 그대로, 모양만) */
+.card { background: var(--soft); border-radius: 22px; padding: 28px; margin: 24px 0; }
+.card h1 { font-family: "Black Han Sans", sans-serif; font-weight: 400; font-size: 32px; margin: 0 0 6px; }
 h3 { font-size: 1.05rem; margin: 24px 0 6px; }
-.sub, .muted { color: var(--muted); }
-.card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 20px 24px;
-  margin-bottom: 16px;
-}
-a { color: var(--accent); }
-.links { display: flex; gap: 16px; justify-content: center; margin: 24px 0; flex-wrap: wrap; }
-footer { text-align: center; color: var(--muted); font-size: 0.9rem; margin-top: 32px; }
+.muted { color: var(--muted); }
 ul { padding-left: 1.2em; }
-hr { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+main > p:first-child { margin-top: 32px; font-weight: 700; }
+
+@media (max-width: 560px) {
+  .hero { padding: 72px 20px 56px; }
+  .logo { font-size: 64px; }
+  h2 { font-size: 34px; }
+  .icon { width: 72px; height: 72px; border-radius: 17px; }
+  .game { gap: 14px; padding: 18px; }
+  .card { padding: 20px; }
+}
