@@ -4,46 +4,66 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GGBB Studio</title>
-<meta name="description" content="GGBB Studio — 작은 손으로 오래 즐거운 게임을 만드는 1인 게임 스튜디오">
+<meta name="description" content="GGBB Studio — 작은 아이디어에서 시작해, 오래 기억될 즐거움을 만드는 인디게임 스튜디오">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero">
-  <div class="logo">GGBB<span>Studio</span></div>
-  <p class="tag">작은 손으로 오래 즐거운 게임을 만듭니다.</p>
-  <nav class="nav"><a href="#games">Games</a><a href="#contact">Contact</a></nav>
-</header>
+<aside class="side">
+  <h1 class="mark" aria-label="GGBB Studio">
+    <span aria-hidden="true">GG</span><span aria-hidden="true">BB</span>
+  </h1>
+  <div class="side-foot">
+    <p class="studio">Studio</p>
+    <p class="tag">작은 아이디어에서 시작해, 오래 기억될 즐거움을 만듭니다.</p>
+    <nav class="nav">
+      <a href="#games">게임</a>
+      <a href="#about">소개</a>
+      <a href="#contact">문의</a>
+    </nav>
+  </div>
+</aside>
 
 <main>
   <section id="games">
-    <h2>Games</h2>
-
+    <h2>게임</h2>
     <article class="game">
-      <img class="icon" src="assets/mozzidang_icon.png" alt="모찌당 아이콘" width="96" height="96">
-      <div class="info">
-        <div class="row"><h3>모찌당</h3><span class="state">출시 예정</span></div>
-        <p>과일을 모아 모찌를 빚고, 골목 손님에게 파는 매치3 + 가게 운영 게임.</p>
-        <div class="badges"><span class="badge">Android</span></div>
-        <div class="btns">
-          <span class="btn off">Google Play 곧 공개</span>
-          <a class="link" href="privacy.html">개인정보처리방침</a>
+      <img class="art" src="assets/mozzidang_feature.jpg" alt="모찌당 대표 그림" width="1024" height="500">
+      <div class="meta">
+        <img class="icon" src="assets/mozzidang_icon.png" alt="" width="72" height="72">
+        <div>
+          <h3>모찌당</h3>
+          <p class="when">Android 출시 예정</p>
         </div>
       </div>
+      <p>과일을 모아 모찌를 빚고, 골목 손님에게 파는 매치3 + 가게 운영 게임.</p>
+      <p class="acts">
+        <span class="btn off" aria-disabled="true">Google Play 곧 공개</span>
+        <a href="privacy.html">개인정보처리방침</a>
+      </p>
     </article>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>비즈니스 · 문의: <a href="mailto:eugo1883@gmail.com">eugo1883@gmail.com</a></p>
+  <section id="about">
+    <h2>소개</h2>
+    <p class="lead">GGBB Studio는 PC와 모바일 플랫폼을 위한 게임을 만드는 인디게임 개발 스튜디오입니다.</p>
+    <p>작은 아이디어 하나에도 특별한 재미가 있다고 믿으며, 누구나 편안하게 즐기고 오래 기억할 수 있는 게임을 만들고자 합니다.</p>
+    <p>우리만의 색깔과 이야기를 담아, 작지만 특별한 게임들을 하나씩 세상에 선보입니다.</p>
   </section>
-</main>
 
-<footer>
-  <a href="privacy.html">개인정보처리방침</a> · <a href="privacy.html#en">Privacy Policy</a><br>
-  © 2026 GGBB Studio
-</footer>
+  <section id="contact">
+    <h2>문의</h2>
+    <p>함께하고 싶은 일이나 게임 이야기는 메일로 보내 주세요.</p>
+    <p><a class="mail" href="mailto:eugo1883@gmail.com">eugo1883@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <span>© 2026 GGBB Studio</span>
+    <a href="privacy.html">개인정보처리방침</a>
+    <a href="privacy.html#en">Privacy Policy</a>
+  </footer>
+</main>
 </body>
 </html>
